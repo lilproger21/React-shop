@@ -1,9 +1,8 @@
-
 interface ModalProps {
     children: React.ReactNode
     title: string
     onClose: () => void
-}
+};
 
 export function Modal({ children, title, onClose }: ModalProps) {
     return (

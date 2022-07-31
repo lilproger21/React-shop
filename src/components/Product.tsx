@@ -3,14 +3,14 @@ import { IProduct } from "../models"
 
 interface ProductProps {
     product: IProduct
-}
+};
 
 export function Product(props: ProductProps) {
     const [details, setDetails] = useState(false);
 
     const btnBgClassName = details ? 'bg-yellow-400' : 'bg-blue-400';
 
-    const btnClasses = ['py-2 px-4 border bg-yellow-400', btnBgClassName]
+    const btnClasses = ['py-2 px-4 border bg-yellow-400', btnBgClassName];
 
     return (
         <div

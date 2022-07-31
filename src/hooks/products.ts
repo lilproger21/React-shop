@@ -10,7 +10,7 @@ export function useProducts() {
 
     function addProduct(product: IProduct) {
         setProducts(prev => [...prev, product])
-    }
+    };
 
     async function fetchProducts() {
         try {
@@ -25,7 +25,7 @@ export function useProducts() {
             setLoading(false)
             setError(error.message)
         }
-    }
+    };
 
     useEffect(() => {
         fetchProducts()

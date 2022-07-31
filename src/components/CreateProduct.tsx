@@ -4,7 +4,6 @@ import { IProduct } from "../models";
 import { ErrorMessage } from "./ErrorMessage";
 
 
-
 const productData: IProduct = {
         title: 'test product',
         price: 13.5,
@@ -15,16 +14,16 @@ const productData: IProduct = {
             rate: 42,
             count: 10
         }
-}
+};
 
 interface CreateProductProps {
     onCreate: (product: IProduct) => void
-}
+};
 
 export function CreateProduct({ onCreate }: CreateProductProps) {
 
-    const [value, setValue] = useState('')
-    const [error, setError] = useState('')
+    const [value, setValue] = useState('');
+    const [error, setError] = useState('');
 
     const submitHandler = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -43,7 +42,7 @@ export function CreateProduct({ onCreate }: CreateProductProps) {
 
     const changeHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
         setValue(e.target.value)
-    }
+    };
 
     return (
         <form onSubmit={submitHandler}>
